@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Ignite Karaoke Main Deck</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/white.min.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h2 class="r-fit-text">What Is Ignite Karaoke?</h2>
+				</section>
+
+				<section>
+					<section id="fragments">
+						<h2>It's a chance to...</h2>
+						<p class="fragment">entertain...</p>
+						<p class="fragment">nerd out...</p>
+						<p class="fragment">come up with a story on the spot...</p>
+						<p class="fragment">...and honestly fill in time for the organizers.</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>So what are the rules?</h2>
+					<ul>
+						<li>This is for fun, FrienDA applies.</li>
+						<li>It <span style="font-style:italic">can</span> go NSFW, but doesn't have to.</li>
+						<li>The <SPAN STYLE="text-decoration:line-through">victim</span> volunteer has 1 minute.</li>
+						<li>15 seconds each slide.</li>
+						<li>A title slide to start it off.</li>
+						<li>Three slides to cover the other 45 seconds.</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>Your <SPAN STYLE="text-decoration:line-through">victims</span> volunteers!</p>
+					<p>Come on up, and line up in this order please.</p>
+					<ul>
+						{% for name in names %}
+						<li><a href="volunteers/{{ name }}_deck.html">{{ name }}</a> </li>
+						{% endfor %}
+					</ul>
+				</section>
+
+				<section  data-background="http://i.giphy.com/{{ final_clapping }}.gif">
+					<h2 style="color:white" class="r-fit-text">One last time, give a round of applause for our volunteers!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>
