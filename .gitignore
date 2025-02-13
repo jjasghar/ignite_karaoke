@@ -11,3 +11,5 @@ node_modules/
 .sass-cache
 venv/
 __pycache__
+*.html
+volunteers/
